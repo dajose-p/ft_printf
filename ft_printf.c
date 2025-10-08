@@ -6,17 +6,11 @@
 /*   By: danjose- <danjose-@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:11:59 by danjose-          #+#    #+#             */
-/*   Updated: 2025/10/08 22:35:29 by danjose-         ###   ########.fr       */
+/*   Updated: 2025/10/08 23:42:24 by danjose-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_printchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 static	int	check_letter(va_list ap, char const letter)
 {
@@ -24,9 +18,13 @@ static	int	check_letter(va_list ap, char const letter)
 
 	i = 0;
 	if (letter == 'c')
-	{
 		i += ft_printchar(va_arg(ap, int));
-	}
+	if (letter == 's')
+		i += ft_printstr(va_arg(ap, char *));
+	if (letter == 'd' || letter == 'i')
+		i += ft_printnbr(va_arg(ap, int));
+	if (letter == 'u')
+		i += ft_printnbr_uns(va_arg(ap, long));
 	return (i);
 }
 

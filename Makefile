@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror 
-SOURCES = ft_printf.c
+SOURCES = ft_printf.c ft_printutils.c
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BON_SOURCES:.c=.o)
 
