@@ -1,57 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printutils.c                                    :+:      :+:    :+:   */
+/*   ft_printutils_ex.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danjose- <danjose-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 22:42:45 by danjose-          #+#    #+#             */
-/*   Updated: 2025/10/11 02:30:27 by danjose-         ###   ########.fr       */
+/*   Created: 2025/10/11 01:44:12 by danjose-          #+#    #+#             */
+/*   Updated: 2025/10/11 02:34:51 by danjose-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	count_num(long long n)
+int	ft_printchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_printstr(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (n > 0)
+	if (!s)
 	{
+		return (i += ft_printstr("(null)"));
+	}
+	while (s[i])
+	{
+		write(1, &s[i], 1);
 		i++;
-		n /= 10;
 	}
 	return (i);
-}
-
-int	ft_printnbr(int n)
-{
-	int			count;
-	long long	nl;
-
-	nl = (long long)n;
-	count = 0;
-	ft_putnbr_fd(n, 1);
-	if (nl == 0)
-		return (1);
-	if (nl < 0)
-	{
-		nl = -nl;
-		count++;
-	}
-	count += count_num(nl);
-	return (count);
-}
-
-int	ft_printnbr_uns(unsigned int n)
-{
-	int		count;
-	char	*num;
-
-	count = 0;
-	num = ft_uitoa(n);
-	count += ft_printstr(num);
-	free(num);
-	return (count);
 }
