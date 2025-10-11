@@ -6,7 +6,7 @@
 /*   By: danjose- <danjose-@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:11:59 by danjose-          #+#    #+#             */
-/*   Updated: 2025/10/11 02:45:59 by danjose-         ###   ########.fr       */
+/*   Updated: 2025/10/11 04:13:55 by danjose-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ static	int	check_letter(va_list ap, char const letter)
 		i += ft_printnbr(va_arg(ap, int));
 	if (letter == 'u')
 		i += ft_printnbr_uns(va_arg(ap, unsigned int));
+	if (letter == 'x')
+		i += ft_printnbr_hex(va_arg(ap, int), 0);
+	if (letter == 'X')
+		i += ft_printnbr_hex(va_arg(ap, int), 1);
 	if (letter == '%')
 		i += ft_printchar('%');
 	return (i);
