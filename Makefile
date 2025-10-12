@@ -1,9 +1,8 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror 
-SOURCES = ft_printf.c ft_printutils.c ft_printutils_ex.c ft_uitoa.c
+SOURCES = ft_printf.c ft_printutils.c ft_printutils_ex.c ft_uitoa.c ft_printutils_add.c
 OBJECTS = $(SOURCES:.c=.o)
-BOBJECTS = $(BON_SOURCES:.c=.o)
 
 all: $(NAME)
 
