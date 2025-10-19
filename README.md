@@ -90,7 +90,9 @@ Hexadecimal: 2a
 
 ---
 
-## Contributions
+## Contributing
 
-This project is part of the 42 curriculum, so external contributions are not accepted.  
-However, you are encouraged to experiment and extend its functionality for educational purposes.
+This project is primarily for personal use in **42 school** projects.  
+Contributions are welcome in the form of suggestions or improvements for function implementations.
+
+---
