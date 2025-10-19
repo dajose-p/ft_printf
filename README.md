@@ -18,13 +18,13 @@ ft_printf is a reimplementation of the famous C printf function, created as a pr
 ## Features
 
 - Supports the following format specifiers:
-  - %c : Character
-  - %s : String
-  - %p : Pointer
-  - %d / %i : Signed integer
-  - %u : Unsigned integer
-  - %x / %X : Hexadecimal integer (lowercase and uppercase)
-  - %% : Prints the '%' character
+  - `%c` : Character
+  - `%s` : String
+  - `%p` : Pointer
+  - `%d` / `%i` : Signed integer
+  - `%u` : Unsigned integer
+  - `%x` / `%X` : Hexadecimal integer (lowercase and uppercase)
+  - `%%` : Prints the '%' character
 - Basic error handling and NULL pointer handling
 - Behavior similar to the original printf from the standard library
 
@@ -34,12 +34,16 @@ ft_printf is a reimplementation of the famous C printf function, created as a pr
 
 1. Clone the repository:
 
+```bash
 git clone https://github.com/your_username/ft_printf.git
 cd ft_printf
+```
 
 2. Compile the library:
 
+```bash
 make
+```
 
 This will generate `libftprintf.a`.
 
@@ -47,18 +51,23 @@ This will generate `libftprintf.a`.
 
 ## Usage
 
-To use ft_printf in your project, link the compiled library:
+To use `ft_printf` in your project, link the compiled library:
 
+```bash
 cc main.c -L. -lftprintf -o my_program
+```
 
 Make sure to include the header:
 
+```c
 #include "ft_printf.h"
+```
 
 ---
 
 ## Examples
 
+```c
 #include "ft_printf.h"
 
 int main(void)
@@ -69,12 +78,15 @@ int main(void)
     ft_printf("Hexadecimal: %x\n", x);
     return 0;
 }
+```
 
 Expected output:
 
+```text
 Hello world, the value is 42
 Pointer: 0x7ffee3b4c6ac
 Hexadecimal: 2a
+```
 
 ---
 
