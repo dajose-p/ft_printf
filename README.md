@@ -11,7 +11,6 @@ ft_printf is a reimplementation of the famous C printf function. It allows you t
 - Usage
 - Examples
 - Contributions
-- License
 
 ---
 
