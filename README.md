@@ -94,9 +94,3 @@ Hexadecimal: 2a
 
 This project is part of the 42 curriculum, so external contributions are not accepted.  
 However, you are encouraged to experiment and extend its functionality for educational purposes.
-
----
-
-## License
-
-This project is free for educational use. All rights to the original code belong to its author.
