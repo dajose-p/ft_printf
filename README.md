@@ -1,6 +1,6 @@
 # ft_printf 🖨️
 
-ft_printf is a reimplementation of the famous C printf function, created as a project at 42 school. It allows you to print formatted strings to the standard output (stdout) using format specifiers similar to the original function.
+ft_printf is a reimplementation of the famous C printf function. It allows you to print formatted strings to the standard output (stdout) using format specifiers similar to the original function.
 
 ---
 
@@ -35,7 +35,7 @@ ft_printf is a reimplementation of the famous C printf function, created as a pr
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/ft_printf.git
+git clone https://github.com/dajose-p/ft_printf.git
 cd ft_printf
 ```
 
